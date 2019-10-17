@@ -1,0 +1,30 @@
+{
+  "name": "ddveo",
+  "version": "1.0.1",
+  "description": "Voice Optimisation Engine Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "base-64": "^0.1.0",
+    "big.js": "^5.2.2",
+    "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
+    "crypto-js": "^3.1.9-1",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.2",
+    "guid": "0.0.12",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.15",
+    "node-uuid": "^1.4.8",
+    "parse-domain": "^2.1.6",
+    "pg": "^7.4.1",
+    "qtumjs-wallet": "^0.2.1",
+    "request": "^2.83.0",
+    "uuid": "^3.2.1"
+  }
+}
