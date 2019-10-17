@@ -51,7 +51,7 @@ exports.create_api_request = async function(req, res) {
         if(data){ // valid apiKey
           const body = req.body;
 
-          await db.saveLog(JSON.stringify(body));
+          // await db.saveLog(JSON.stringify(body));
 
           const responseId = body.responseId;
 
@@ -59,38 +59,10 @@ exports.create_api_request = async function(req, res) {
 
           const parameters = body.queryResult.parameters;
 
-          
+          console.log(intentAction)
 
-          // let test = base64.encode(JSON.stringify(parameters))
-
-          let userId = await core.getRequestUser(body.originalDetectIntentRequest);
-
-          if(userId)
-          {
-            
-
-            // let user = await db.getUser(userId); // get user
-
-            // if(!user) // if user is undefined, create the user
-            // {
-            //   const account = await qtum.createAccount();
-
-            //   const encryptedPrivateKey = await core.aesEncrypt(account.privateKey);
-            //   user = await db.saveUser(userId, encryptedPrivateKey, account.address);
-            //   let balance = await qtum.getBalance(account.privateKey);
-            //   let response = core.setResponse(`Your new *QTUM* address is \`${account.address}\` Balance is *${balance}*. You can transfer fund into this address. `);
-
-            //   res.status(200).send(response);
-
-            // }else
-              
-
-      
-            // }
-
-          }
-
-          res.status(200).send({ msg: `hello msg` });
+          let response = core.setResponse(`your action is: ${intentAction}`);
+          res.status(200).send(response);
 
 
         }else{
